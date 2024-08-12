@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Checkout Page</title>
+        <link th:href="@{/css/tapPay.css}" rel="stylesheet" type="text/css" />
+        <script src="https://js.tappaysdk.com/sdk/tpdirect/v5.14.0"></script>
+    </head>
+    <body>
+        <input
+            type="text"
+            placeholder="Enter user token here"
+            id="user-token"
+        />
+        <div class="tpfield" id="card-number"></div>
+        <div class="tpfield" id="card-expiration-date"></div>
+        <div class="tpfield" id="card-ccv"></div>
+        <button id="submit-button" onclick="onSubmit()">Submit</button>
+        <div id="card-errors"></div>
+        <script th:src="@{/js/tapPay.js}"></script>
+    </body>
+</html>

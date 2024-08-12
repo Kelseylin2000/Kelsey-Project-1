@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Profile</title>
+        <link
+            rel="stylesheet"
+            th:href="@{/css/signInAndSignUp.css}"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            th:href="@{/css/headerAndFooter.css}"
+            type="text/css"
+        />
+    </head>
+    <body>
+        <header th:replace="fragments/header :: header"></header>
+        <div id="profile-container" class="content"></div>
+        <footer th:replace="fragments/footer :: footer"></footer>
+
+        <script th:src="@{/js/getProfile.js}"></script>
+        <script th:src="@{/js/signupAndSignin.js}"></script>
+    </body>
+</html>

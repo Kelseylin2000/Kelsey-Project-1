@@ -1,0 +1,28 @@
+<header>
+    <a th:href="@{/index.html}">
+        <img class="logo" th:src="@{/image/logo.png}" />
+    </a>
+    <nav>
+        <ul>
+            <li><a th:href="@{/index.html?category=women}">女裝</a></li>
+            <span class="divider">|</span>
+            <li><a th:href="@{/index.html?category=men}">男裝</a></li>
+            <span class="divider">|</span>
+            <li>
+                <a th:href="@{/index.html?category=accessories}">配件</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="search-cart-profile">
+        <div class="search-container">
+            <input type="text" placeholder="搜尋" />
+            <img class="search-icon" th:src="@{/image/search.png}" />
+        </div>
+        <a th:href="@{/index.html}">
+            <img th:src="@{/image/cart.png}" alt="Cart" />
+        </a>
+        <a th:href="@{/profile.html}">
+            <img th:src="@{/image/member.png}" alt="Member" />
+        </a>
+    </div>
+</header>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head>
+        <title>Thank you</title>
+        <link
+            rel="stylesheet"
+            th:href="@{/css/headerAndFooter.css}"
+            type="text/css"
+        />
+        <link rel="stylesheet" th:href="@{/css/oneLine.css}" type="text/css" />
+    </head>
+    <body>
+        <header th:replace="fragments/header :: header"></header>
+        <h2>不好意思，您沒有權限進入管理頁面。</h2>
+        <footer th:replace="fragments/footer :: footer"></footer>
+    </body>
+</html>

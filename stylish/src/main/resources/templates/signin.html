@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head>
+        <title>Facebook Login</title>
+    </head>
+    <body>
+        <fb:login-button
+            scope="public_profile,email"
+            onlogin="checkLoginState();"
+        >
+        </fb:login-button>
+
+        <div id="status"></div>
+
+        <script th:src="@{/js/facebookSignin.js}"></script>
+    </body>
+</html>

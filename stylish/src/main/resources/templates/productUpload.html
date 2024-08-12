@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            th:href="@{/css/management.css}"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <title>Product Form</title>
+    </head>
+    <body>
+        <h1 th:text="${message}"></h1>
+        <h1>Product Form</h1>
+        <form
+            action="/api/1.0/admin/uploadProduct"
+            method="POST"
+            enctype="multipart/form-data"
+        >
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category" required />
+            <br /><br />
+
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required />
+            <br /><br />
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description"></textarea>
+            <br /><br />
+
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" step="0.01" required />
+            <br /><br />
+
+            <label for="texture">Texture:</label>
+            <input type="text" id="texture" name="texture" />
+            <br /><br />
+
+            <label for="wash">Wash:</label>
+            <input type="text" id="wash" name="wash" />
+            <br /><br />
+
+            <label for="place">Place:</label>
+            <input type="text" id="place" name="place" />
+            <br /><br />
+
+            <label for="note">Note:</label>
+            <textarea id="note" name="note"></textarea>
+            <br /><br />
+
+            <label for="story">Story:</label>
+            <textarea id="story" name="story"></textarea>
+            <br /><br />
+
+            <!-- Colors -->
+            <div id="color_div_container">
+                <div class="color_div" id="color_div_0">
+                    <label for="colors[0].code">Color Code:</label>
+                    <input
+                        type="text"
+                        id="colors[0].code"
+                        name="colors[0].code"
+                        required
+                    />
+
+                    <label for="colors[0].name">Color Name:</label>
+                    <input
+                        type="text"
+                        id="colors[0].name"
+                        name="colors[0].name"
+                        required
+                    />
+                </div>
+            </div>
+            <button type="button" onclick="addColor()">Add Color</button>
+            <br /><br />
+
+            <!-- Variants -->
+            <div id="variant_div_container">
+                <div class="variant_div" id="variant_div_0">
+                    <label for="variants[0].colorCode">Color Code:</label>
+                    <input
+                        type="text"
+                        id="variants[0].colorCode"
+                        name="variants[0].colorCode"
+                        required
+                    />
+
+                    <label for="variants[0].size">Size:</label>
+                    <input
+                        type="text"
+                        id="variants[0].size"
+                        name="variants[0].size"
+                        required
+                    />
+
+                    <label for="variants[0].stock">Stock Quantity:</label>
+                    <input
+                        type="number"
+                        id="variants[0].stock"
+                        name="variants[0].stock"
+                        required
+                    />
+                </div>
+            </div>
+            <button type="button" onclick="addVariant()">Add Variant</button>
+            <br /><br />
+
+            <label for="mainImageFile">Main Image:</label>
+            <input type="file" id="mainImageFile" name="mainImageFile" />
+            <br /><br />
+
+            <div class="image_div" id="image_div">
+                <label for="imagesFiles">Images:</label>
+                <input
+                    type="file"
+                    id="imagesFiles"
+                    name="imagesFiles"
+                    multiple
+                />
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <script th:src="@{/js/management.js}"></script>
+    </body>
+</html>

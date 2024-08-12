@@ -1,0 +1,64 @@
+/* campaign */
+#campaign-container {
+    position: relative;
+    display: inline-block;
+}
+
+.campaign-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.campaign-story {
+    font-size: 20px;
+    position: absolute;
+    bottom: 30%;
+    left: 10%;
+    max-width: 25%;
+    cursor: pointer;
+}
+
+/* products */
+#products-container {
+    margin: auto;
+    max-width: 1160px;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 10px;
+}
+
+.product-item {
+    margin: 20px 0;
+    display: inline-block;
+    width: 360px;
+    height: 616px;
+    vertical-align: top;
+    font-size: 20px;
+}
+
+.product-item a {
+    color: #313538;
+    text-decoration: none;
+}
+
+.product-item img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+}
+
+.color-options {
+    margin-top: 5px;
+}
+
+.color-option {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    border: 1px solid #d3d3d3;
+}

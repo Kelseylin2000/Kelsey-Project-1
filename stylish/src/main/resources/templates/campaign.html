@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Product Campaign</title>
+    </head>
+    <body>
+        <h1 th:text="${message}"></h1>
+        <h1>Create Product Campaign</h1>
+        <form
+            action="/api/1.0/admin/uploadCampaign"
+            method="POST"
+            enctype="multipart/form-data"
+        >
+            <label for="productSelect">Select Product:</label>
+            <select id="productSelect" name="productId">
+                <!-- Product options will be populated here --></select
+            ><br /><br />
+
+            <label for="pictureFile">Upload Picture:</label>
+            <input
+                type="file"
+                id="pictureFile"
+                name="pictureFile"
+                accept="image/*"
+            /><br /><br />
+
+            <label for="story">Story:</label>
+            <textarea id="story" name="story" rows="4" cols="50"></textarea
+            ><br /><br />
+
+            <button type="submit">Submit Campaign</button>
+        </form>
+        <script th:src="@{/js/campaignCreate.js}"></script>
+    </body>
+</html>
